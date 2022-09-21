@@ -1,0 +1,36 @@
+//Fonts
+
+$poppins: 'Poppins', sans-serif;
+
+//color
+
+$theme-color: #d00b2b;
+
+$color-two: #1b0e60;
+
+$color-three: #fd6631;
+
+$color-four: #6019d5;
+
+$heading-color: #000000;
+
+$white: #fff;
+
+$text-color: #616161;
+
+// Bg Color
+
+$dark_bg: #16161b;
+
+$light-bg: #f7f7f7;
+
+
+// Responsive Variables
+$lp: 'only screen and (min-width: 1200px) and (max-width: 1600px)';
+$xl: 'only screen and (min-width: 1200px)';
+$lg : 'only screen and (min-width: 992px) and (max-width: 1199px)';
+$md:'only screen and (min-width: 768px) and (max-width: 991px)';
+$xm:'(max-width: 991px)';
+$xs:'(max-width: 767px)';
+$xss:'(max-width: 400px)';
+$sm: 'only screen and (min-width: 576px) and (max-width: 767px)';

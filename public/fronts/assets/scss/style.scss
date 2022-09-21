@@ -1,0 +1,58 @@
+/*-----------------------------------------------------------------------------------
+
+    Template Name: Fidda - Portfolio & Digital Agency HTML Template
+    Template URI: site.com
+    Description: Fidda - Portfolio & Digital Agency HTML Template
+    Author: Md. Mizanur Rahman
+    Author URI: site.com
+    Version: 1.0
+
+-----------------------------------------------------------------------------------
+
+    CSS INDEX
+    ===================
+
+    01. Theme default css
+	02. Header css
+    03. Hero css
+    04. About css
+    05. Service css
+    06. Features css
+    07. Portfolio css
+    08. Testimonial css
+    09. Team css
+    10. Blog css
+    11. Contact css
+    12. Footer css
+
+-----------------------------------------------------------------------------------*/
+
+@import 'variables';
+@import 'mixin';
+
+//common
+@import 'common';
+//header
+@import 'header';
+//Hero
+@import 'hero';
+//About
+@import 'about';
+//Service
+@import 'service';
+//Features
+@import 'features';
+//Portfolio
+@import 'portfolio';
+//Testimonial
+@import 'testimonial';
+//Pricing
+@import 'team';
+//Shop
+@import 'shop';
+//Blog
+@import 'blog';
+// Contact
+@import 'contact';
+//Footer
+@import 'footer';

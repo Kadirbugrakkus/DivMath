@@ -1,0 +1,425 @@
+
+/*---=======================
+   03. Start Hero  css 
+===========================---*/
+
+.hero-area-v1{
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    & .hero-slider-one{
+        padding: 260px 0 220px;
+        @media #{$xs}{
+            padding: 160px 0;
+        }
+        & .slick-list{
+            padding-top: 30px;
+        }
+        & .slick-arrow{
+            position: absolute;
+            top: 50%;
+            @include transform(translateY(-50%));
+            cursor: pointer;
+            z-index: 1;
+            border: 2px solid #dfdfdf;
+            color: #616161;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            font-size: 50px;
+            &.prev{
+                left: 70px;
+            }
+            &.next{
+                right: 70px;
+            }
+            &:hover,&:focus{
+                border-color: $theme-color;
+                color: $theme-color;
+            }
+            @media #{$lp}{
+                width: 60px;
+                height: 60px;
+                font-size: 20px;
+                &.prev{
+                    left: 0px;
+                }
+                &.next{
+                    right: 0px;
+                }
+            }
+        }
+    }
+    &:after{
+        position: absolute;
+        top: -180px;
+        right: 140px;
+        content: "";
+        width: 1021px;
+        height: 1021px;
+        background-color: #f7f7f7;
+        border-radius: 50%;
+        z-index: -1;
+    }
+    & .hero-content{
+        @media #{$xm}{
+            margin-bottom: 100px;
+        }
+        & span.span{
+            display: block;
+            color: $heading-color;
+            position: relative;
+            font-size: 18px;
+            font-weight: 700;
+            &:before{
+                display: inline-block;
+                content: '';
+                width: 55px;
+                height: 3px;
+                background-color: $theme-color;
+                vertical-align: middle;
+                margin-right: 20px;
+            }
+        }
+        & h1{
+            font-size: 120px;
+            line-height: 150px;
+            margin-bottom: 50px;
+            @media #{$lp}{
+                font-size: 80px;
+                line-height: 90px;
+            }
+            @media #{$lg}{
+                font-size: 80px;
+                line-height: 90px;
+            }
+            @media #{$xm}{
+                font-size: 40px;
+                line-height: 50px;
+            }
+            @media #{$xs}{
+                font-size: 30px;
+                line-height: 40px;
+            }
+        }
+    }
+    & .hero-img{
+        position: relative;
+        z-index: 1;
+        &:after{
+            position: absolute;
+            top: -30px;
+            right: -30px;
+            width: 335px;
+            height: 330px;
+            background-color: $theme-color;
+            content: '';
+            z-index: -1;
+        }
+    }
+}
+
+.hero-area-v2{
+    & .hero-slider-two{
+        & .slick-arrow{
+            position: absolute;
+            top: 50%;
+            @include transform(translateY(-50%));
+            cursor: pointer;
+            z-index: 1;
+            border: 2px solid $white;
+            color: $white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            font-size: 50px;
+            @include transition(.3s);
+            &.prev{
+                left: 70px;
+            }
+            &.next{
+                right: 70px;
+            }
+            &:hover{
+                color: $color-two;
+                border-color: $color-two;
+            }
+            @media #{$lp}{
+                width: 60px;
+                height: 60px;
+                font-size: 20px;
+                &.prev{
+                    left: 30px;
+                }
+                &.next{
+                    right: 30px;
+                }
+            }
+        }
+    }
+    & .single-slider{
+        padding: 302px 0 160px;
+        @media #{$xs}{
+            padding: 190px 0 160px;
+        }
+    }
+    & .hero-content{
+        & span.span{
+            font-size: 18px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #1b0e60;
+            margin-bottom: 25px;
+            &:before,&:after{
+                display: inline-block;
+                content: '';
+                width: 55px;
+                height: 3px;
+                vertical-align: middle;
+                background-color: #1b0e60;
+            }
+            &:before{
+                margin-right: 20px;
+            }
+            &:after{
+                margin-left: 20px;
+            }
+            @media #{$xs}{
+                font-size: 16px;
+            }
+        }
+        & h1{
+            font-size: 120px;
+            line-height: 120px;
+            color: #1b0e60;
+            margin-bottom: 40px;
+            @media #{$lp}{
+                font-size: 80px;
+                line-height: 90px;
+            }
+            @media #{$lg}{
+                font-size: 80px;
+                line-height: 90px;
+            }
+            @media #{$xm}{
+                font-size: 40px;
+                line-height: 50px;
+            }
+            @media #{$xs}{
+                font-size: 30px;
+                line-height: 40px;
+            }
+        }
+    }
+}
+@keyframes rotate{
+    0% {
+		transform: rotate(0deg);
+	}
+    100% {
+		transform: rotate(360deg);
+	}
+}
+@keyframes zoom{
+    0% {
+		transform: scale(1);
+	}
+    50%{
+        transform: scale(1.2);
+    }
+    100% {
+		transform: scale(1);
+	}
+}
+.hero-area-v3{
+    position: relative;
+    & .shape-box{
+        @media #{$lg}{
+            display: none;
+        }
+        @media #{$xm}{
+            display: none;
+        }
+        & .shape{
+            position: absolute;
+            animation: rotate 8s ease-in alternate infinite;
+            &.shape-one{
+                top: 190px;
+                left: 140px;
+                animation: zoom 8s ease-in alternate infinite;
+            }
+            &.shape-two{
+                top: 190px;
+                left: 39%;
+            }
+            &.shape-three{
+                bottom: 190px;
+                left: 39%;
+            }
+            &.border-line{
+                top: 220px;
+                left: 135px;
+                width: 360px;
+                height: 360px;
+                border-radius: 50%;
+                border: 1px solid rgb(255 255 255 / 20%);
+            }
+        }
+    }
+    & .hero-wrapper{
+        padding: 320px 0 220px;
+        background-color: #6019d5;
+        @media #{$xs}{
+            padding: 220px 0 120px;
+        }
+    }
+    & .hero-right{
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 50%;
+        height: 100%;
+        clip-path: polygon(5% 0, 100% 0, 100% 100%, 0% 100%);
+        @media #{$lg}{
+            display: none;
+        }
+        @media #{$xm}{
+            display: none;
+        }
+    }
+    & .hero-content{
+        position: relative;
+        z-index: 2;
+        & h1{
+            font-size: 120px;
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: white;
+            color: transparent;
+            line-height: 120px;
+            margin-bottom: 58px;
+            @media #{$xs}{
+                font-size: 40px;
+                line-height: 45px;
+                margin-bottom: 20px;
+            }
+        }
+        & h5.line{
+            color: $white;
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 51px;
+            @media #{$xs}{
+                margin-bottom: 20px;
+            }
+            &:before{
+                display: inline-block;
+                content: '';
+                width: 55px;
+                height: 3px;
+                background-color: $white;
+                margin-right: 30px;
+                vertical-align: middle;
+                @media #{$xs}{
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+
+.custom-container{
+    max-width: 1400px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    @media #{$lp}{
+        max-width: 1200px;
+    }
+    @media #{$lg}{
+        max-width: 950px;
+        padding: 15px 0;
+    }
+    @media #{$md}{
+        max-width: 750px;
+        padding: 15px 0;
+    }
+    @media #{$xs}{
+        max-width: 500px;
+        padding: 15px 0;
+    }
+    @media #{$xss}{
+        max-width: 300px;
+        padding: 15px 0;
+    }
+}
+.breadcrumbs-area{
+    position: relative;
+    z-index: 1;
+    &:after{
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: '';
+        width: 100%;
+        height: 100%;
+        background-color: rgba(96, 25, 213, 0.65);
+        z-index: -1;
+    }
+    & .page-title{
+        @media #{$xm}{
+            margin-bottom: 20px;
+        }
+        & h1{
+            color: $white;
+            @media #{$lg}{
+                font-size: 50px;
+                line-height: 60px;
+            }
+            @media #{$xm}{
+                font-size:40px;
+                line-height: 60px;
+            }
+        }
+    }
+    & .page-breadcrumb{
+        float: right;
+        @media #{$xm}{
+            float: none;
+        }
+        & ul{
+            & li{
+                font-size: 20px;
+                font-weight: 500;
+                &.active{
+                    & a{
+                        color: $white;
+                    }
+                }
+                &:last-child{
+                    &:after{
+                        display: none;
+                    }
+                }
+                &:after{
+                    display: inline-block;
+                    content: '\f105';
+                    padding-left: 10px;
+                    padding-right: 8px;
+                    font-family: 'Font Awesome 5 Pro';
+                }
+                color: $white;
+            }
+        }
+    }
+}
+
+/*---=======================
+   End Hero  css 
+===========================---*/
